@@ -10,9 +10,13 @@ function ItemList({getData, onItemSelected,renderItem }) {
         getData()
         .then((data) => {
             updateList(data)
-           
-        })
-    })
+        });
+        // const request = async () => {
+        //     const res = await getData();
+        //     updateList(res);
+        // }
+        // request(); 
+    }, [])
     
      function renderItems(arr) {
         return arr.map((item) => {
